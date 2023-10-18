@@ -2,6 +2,17 @@
 
 # image 문을 사용해 이미지를 정의합니다.
 # image eileen happy = "eileen_happy.png"
+image bg room = "he_room.bmp"
+image bg school_twi = "school_fun_twi.bmp"
+image bg school_shoes = "school_sho_day.bmp"
+image bg street_t = "street_t.bmp"
+image bg street_flows = "street_flo.bmp"
+image bg school_front = "school_fro.bmp"
+image bg home_front = "home_fro.bmp"
+image bg home_in = "home_in.bmp"
+image bg conbini = "conbini.bmp"
+
+
 
 # 게임에서 사용할 캐릭터를 정의합니다.
 define n = Character("mn", dynamic = True, color="#ffffff")
@@ -23,10 +34,11 @@ label start:
                 spacing 20
                 text question_name xalign 0.5
                 input default hero_name xalign 0.5
-    $ mn = renpy.call_screen("set_name", question_name=" 드디어 캐릭터 이름 입력받는다! ", hero_name="성호")
+    $ mn = renpy.call_screen("set_name", question_name="당신의 이름은?", hero_name="성호")
     
+    with Dissolve(.5)
     
-
     jump day1_1
+
     return
 
