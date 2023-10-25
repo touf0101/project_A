@@ -2,29 +2,55 @@
 
 # image 문을 사용해 이미지를 정의합니다.
 # image eileen happy = "eileen_happy.png"
-image bg room = "he_room.bmp"
-image bg school_twi = "school_fun_twi.bmp"
-image bg school_shoes = "school_sho_day.bmp"
-image bg street_t = "street_t.bmp"
-image bg street_flows = "street_flo.bmp"
-image bg school_front = "school_fro.bmp"
-image bg home_front = "home_fro.bmp"
-image bg home_in = "home_in.bmp"
-image bg conbini = "conbini.bmp"
+image bg room = "bga/he_room.bmp"
+image bg school_twi = "bga/school_fun_twi.bmp"
+image bg school_shoes = "bga/school_sho_day.bmp"
+image bg street_t = "bga/street_t.bmp"
+image bg street_flows = "bga/street_flo.bmp"
+image bg school_front = "bga/school_fro.bmp"
+image bg home_front = "bga/home_fro.bmp"
+image bg home_in = "bga/home_in.bmp"
+image bg conbini = "bga/conbini.bmp"
+image bg twilight = "bga/twilight.bmp"
+image bg past_school = "bga/past_school.bmp"
+image bg school_artroom = "bga/school_art.bmp"
+image bg school_hall = "bga/school_hall.bmp"
+image bg school_library = "bga/school_lib.bmp"
+image bg school_healthroom = "bga/school_heal.bmp"
+image bg school_classroom = "bga/school_room.bmp"
+image bg school_stairs = "bga/school_sta.bmp"
+image bg school_roof_twi = "bga/school_top.bmp"
+image bg school_roof_twi_2 = "bga/school_top_2.bmp"
+image bg school_roof_door = "bga/school_top_door.bmp"
+image bg street_tt = "bga/street_tt.bmp"
+image bg school_room_front = "bga/school_room_2.bmp"
+image bg black = "bga/black.png"
+image bg school_pri = "bga/school_pri.bmp"
+image bg school_market = "bga/school_mar.bmp"
+image bg school_com = "bga/school_com.bmp"
 
+
+image char_a = im.FactorScale("char/a.png", 0.33)
+image char_b = im.FactorScale("char/b.png", 0.33)
+image char_c = im.FactorScale("char/c.png", 0.33)
+image char_d = im.FactorScale("char/d.png", 0.33)
 
 
 # 게임에서 사용할 캐릭터를 정의합니다.
 define n = Character("mn", dynamic = True, color="#ffffff")
-define a = Character('소꿉친구', color="#b83939")
-define b = Character('전학생', color="#c8fcde")
-define c = Character('선배', color="#793ac1")
-define d = Character('후배', color="#f0ff1d")
+define a = Character('유이', color="#fa7e7e")
+define b = Character('이솔', color="#2f6be2")
+define c = Character('가온', color="#fa6dee")
+define d = Character('모람', color="#f0ff1d")
 define narrator = Character(None, what_color="#00ddff")
-define t = Character('선생님', color="#404040")
+define t = Character('선생님', color="#999999")
+define m = Character(None, what_color="#ff0000")
 
 # 여기에서부터 게임이 시작합니다.
 label start:
+    stop music fadeout 1.0
+
+
     screen set_name(question_name, hero_name):
         frame:
             xpadding 50
@@ -35,6 +61,7 @@ label start:
                 text question_name xalign 0.5
                 input default hero_name xalign 0.5
     $ mn = renpy.call_screen("set_name", question_name="당신의 이름은?", hero_name="성호")
+
     
     with Dissolve(.5)
     
