@@ -36,6 +36,26 @@ image char_c = im.FactorScale("char/c.png", 0.33)
 image char_d = im.FactorScale("char/d.png", 0.33)
 
 
+define audio.alarm = "effect/alarm_clock.mp3"
+define audio.heart_beat = "effect/heart_beat.mp3"
+define audio.school_bell = "effect/school_bell.mp3"
+define audio.chair = "effect/slide_chair.mp3"
+define audio.door_close = "effect/slide_door_close.mp3"
+define audio.door_open = "effect/slide_door_open.mp3"
+
+
+define audio.bgm_1 = "bgm/After Merienda.mp3"
+define audio.bgm_2 = "bgm/Coffee Shop in Yume.mp3"
+define audio.bgm_3 = "bgm/Our home.mp3"
+define audio.bgm_4 = "bgm/Rainy day Traumerei.mp3"
+define audio.bgm_5 = "bgm/Snow hertz.mp3"
+define audio.bgm_6 = "bgm/Tea time in the sunshine.mp3"
+define audio.bgm_7 = "bgm/Toroime Diary.mp3"
+define audio.bgm_8 = "bgm/Welcome to Traume.mp3"
+define audio.bgm_9 = "bgm/YU.ME.NO!.mp3"
+define audio.bgm_10 = "bgm/Yuno Atelier.mp3"
+
+
 # 게임에서 사용할 캐릭터를 정의합니다.
 define n = Character("mn", dynamic = True, color="#ffffff")
 define a = Character('유이', color="#fa7e7e")
@@ -56,10 +76,12 @@ label start:
             xpadding 50
             ypadding 50
             xalign 0.5 yalign 0.5
+
             vbox:   
                 spacing 20
                 text question_name xalign 0.5
                 input default hero_name xalign 0.5
+
     $ mn = renpy.call_screen("set_name", question_name="당신의 이름은?", hero_name="성호")
 
     
