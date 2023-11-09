@@ -2,6 +2,6 @@
 동아리 출품 미연시 <br>
 1차 시연회 대성공!
 ## heartside
-developement & porducer : pdy <br>
+developement & producer : pdy <br>
 marketing : kjg <br>
 art : lsm
