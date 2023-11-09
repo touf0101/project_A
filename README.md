@@ -3,5 +3,5 @@
 1차 시연회 대성공!
 ## heartside
 developement : pdy <br>
-marketing : kjg
+marketing : kjg <br>
 art : lsm
